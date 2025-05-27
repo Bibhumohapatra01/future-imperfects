@@ -1,0 +1,464 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #ffffff;
+  padding-top: 60px; /* Adjust depending on navbar height */
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.navbar {
+  display: flex;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 1%;
+  background: #ffffff;
+  border-bottom: 1px solid #e6e6e6;
+  z-index: 1000; 
+   height: 62px; 
+  background: #ffffff;
+  border-bottom: 1px solid #e6e6e6;
+}
+
+
+
+.navbar-left h1 {
+  font-size: 14px;
+  letter-spacing: 3px;
+  font-weight: bold;
+  color: #333;
+}
+
+.navbar-center ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.navbar-center ul li {
+  position: relative;
+}
+
+.navbar-center ul li:not(:last-child)::after {
+  content: "|";
+  position: absolute;
+  right: -12px;
+  color: #ffffff;
+}
+
+.navbar-center a {
+  text-decoration: none;
+  color: #555;
+  font-size: 14px;
+  font-weight: 600;
+  transition: color 0.3s;
+}
+
+.navbar-center a:hover {
+  color: teal;
+}
+
+.navbar-right {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 5px 10px;
+  border-radius: 4px;
+  background-color: #fff;
+}
+
+.icon-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hexagon {
+  position: relative;
+  width: 100px;  /* Adjust size */
+  height: 55px;
+  background-color: #ddd;
+  margin: 20px auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  clip-path: polygon(
+    25% 0%, 
+    75% 0%, 
+    100% 50%, 
+    75% 100%, 
+    25% 100%, 
+    0% 50%
+  );
+}
+
+.hexagon img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.icon-button svg {
+  color: #999;
+  transition: color 0.3s;
+}
+
+.icon-button:hover svg {
+  color: #333;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: sans-serif;
+  background-color: #f3f1f1;
+}
+
+.container {
+  display: flex;;
+}
+
+.sidebar {
+  width: 400px; /* ⬅️ Increase from old value */
+  background-color: #f3f1f1;
+  padding: 20px;
+  box-sizing: border-box;
+  border-right: 1px solid #f3f1f1;
+  position: relative;
+}
+
+
+.logo-hexagon img {
+  width: 68px;
+  height: 71px;
+  clip-path: polygon(
+    25% 5%, 75% 5%, 
+    100% 50%, 75% 95%, 
+    25% 95%, 0% 50%
+  );
+  object-fit: cover;
+}
+
+
+
+.sidebar-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 20px; /* SPACE between each box */
+}
+
+.card {
+  background: #fff;
+  border: 1px solid #ddd; /* soft border around the box */
+  border-radius: 8px; /* slightly rounded corners */
+  overflow: hidden;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05); /* light shadow for box feel */
+  transition: transform 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-5px); /* small hover lift effect */
+}
+
+.card img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.card-content {
+  padding: 15px;
+  text-align: left;
+}
+
+.card-content h3 {
+  font-size: 13px;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+}
+
+.card-content p {
+  font-size: 11px;
+  color: #777;
+}
+
+.post-date {
+  font-size: 12px;
+  color: #999;
+  margin: 0;
+}
+.sidebar-posts {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin-top: 30px;
+}
+
+.post {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 10px;
+}
+
+.post img {
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+.post-content h5 {
+  font-size: 12px;
+  font-weight: bold;
+  margin: 0 0 5px 0;
+  text-transform: uppercase;
+}
+
+.post-content p {
+  font-size: 11px;
+  color: #777;
+  margin: 0;
+}
+
+
+.sidebar-header h1 {
+  font-size: 24px;
+  letter-spacing: 3px;
+  margin-top: 15px;
+  line-height: 1.2;
+  color: #333;
+  font-weight: bold;
+  margin-bottom: 10px; /* 👉 this adds space below heading */
+}
+
+
+
+
+.card img {
+  width: 100%; /* Make sure image fits inside */
+  height: auto; /* Adjust height automatically */
+  display: block;
+  object-fit: cover; /* Cover the card without stretching */
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+}
+
+
+.sidebar h1 {
+  font-size: 34px;
+  font-weight: bold;
+  margin-top: 20px;
+  letter-spacing: 2px;
+}
+.divider {
+  width: 100%;
+  height: 1px;
+  background-color: rgba(0, 0, 0, 0.1);
+  margin: 30px 0;
+}
+
+.tagline {
+  font-size: 18px;
+  color: #5f5f5f;
+  padding: 10px 0;
+  line-height: 1.5;
+}
+
+.content {
+  flex: 1;
+  width:20cap;
+}
+.card_divider{
+  width: 100%;
+  height: 1px;
+}
+
+.sidebar-about {
+  text-align: center;
+  margin-top: 30px;
+}
+
+.sidebar-about h2 {
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 15px;
+}
+
+.sidebar-about p {
+  font-size: 13px;
+  color: #666;
+  line-height: 1.6;
+  margin-bottom: 20px;
+  padding: 0 10px;
+}
+.learn-more-button {
+  display: inline-block;
+  padding: 8px 16px;
+  border: 1px solid #ccc;
+  text-transform: uppercase;
+  font-size: 12px;
+  color: #333;
+  text-decoration: none;
+  margin-bottom: 20px;
+}
+
+
+.sidebar-social img {
+  width: 24px;
+  height: 24px;
+  object-fit: contain;
+}
+.sidebar-social {
+  display: flex;
+  justify-content:left;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.sidebar-social a {
+  font-size: 20px;
+  color: #999;
+  transition: color 0.3s;
+}
+
+.sidebar-social a:hover {
+  color: #333;}
+
+
+  body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #f5f5f5;
+    color: #333;
+  }
+  
+  .container {
+    display: flex;
+    max-width: 12000px;
+    margin: 0 auto;
+    padding: 40px 20px;
+  }
+ 
+  .container.sidebar.tagline{
+    size: 13px;
+    line-height: 32px;
+  }
+  /* Wrapper that aligns content to right */
+.content-wrapper {
+  display: flex;
+  justify-content: flex-end; /* Push content to the right */
+  padding: 20px;
+}
+
+/* Post card box */
+.post-card {
+  max-width: 850px;
+  background: #fff;
+  margin: 40px auto;
+  border: 1px solid #eee;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+  border-radius: 4px;
+  overflow: hidden;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.post-header {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  border-bottom: 1px solid #eee;
+}
+
+.post-title h2 {
+  text-transform: uppercase;
+  font-weight: bold;
+  letter-spacing: 1px;
+  margin-bottom: 5px;
+}
+
+.subtitle {
+  font-size: 12px;
+  color: #777;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.post-meta {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: space-between;
+}
+
+.post-date {
+  font-size: 11px;
+  color: #999;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+}
+
+.author-info {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.author-name {
+  font-size: 12px;
+  color: #666;
+}
+
+.author-photo {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.post-image img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.post-body {
+  padding: 20px;
+  font-size: 14px;
+  color: #444;
+}
+
+.read-more {
+  margin-top: 15px;
+  padding: 8px 14px;
+  font-size: 12px;
+  text-transform: uppercase;
+  border: 1px solid #ccc;
+  background-color: white;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.read-more:hover {
+  background-color: #f5f5f5;
+}
+
